@@ -1,5 +1,5 @@
-FROM python:3-alpine
+FROM golang:alpine
 
 COPY . .
 
-CMD python main.py
+CMD go run main.go
