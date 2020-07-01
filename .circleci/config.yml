@@ -3,11 +3,11 @@ version: 2.1
 jobs:
   build-and-test:
     docker:
-      - image: python:3-alpine
+      - image: golang:alpine
     resource_class: small
     steps:
       - checkout
-      - run: python main.py
+      - run: go run main.go
 workflows:
     build-and-test:
       jobs:
