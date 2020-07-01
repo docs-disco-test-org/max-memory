@@ -1,9 +1,5 @@
-FROM node:10-alpine
-
-COPY package.json .
-COPY yarn.lock .
-RUN npm install --frozen-lockfile
+FROM python:3-alpine
 
 COPY . .
 
-CMD yarn test
+CMD python main.py

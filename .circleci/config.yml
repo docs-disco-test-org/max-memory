@@ -3,12 +3,11 @@ version: 2.1
 jobs:
   build-and-test:
     docker:
-      - image: node:10-alpine
+      - image: python:3-alpine
     resource_class: small
     steps:
       - checkout
-      - run: npm install
-      - run: npm test
+      - run: python main.py
 workflows:
     build-and-test:
       jobs:
