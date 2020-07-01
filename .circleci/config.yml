@@ -3,7 +3,7 @@ version: 2.1
 jobs:
   build-and-test:
     docker:
-      - image: node:13-alpine
+      - image: node:12-alpine
     resource_class: small
     steps:
       - checkout
