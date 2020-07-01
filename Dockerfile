@@ -6,4 +6,4 @@ RUN npm install --frozen-lockfile
 
 COPY . .
 
-CMD yarn start
+CMD yarn test

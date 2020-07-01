@@ -3,8 +3,8 @@
   "scripts": {
     "build": "docker build -t max-memory:latest .",
     "execute": "docker run --rm -it --name max-memory --memory=512mb max-memory:latest",
-    "start": "node main.js",
-    "test": "yarn build && yarn execute"
+    "start": "yarn build && yarn execute",
+    "test": "node main.js"
   },
   "version": "1.0.0",
   "main": "index.js",
