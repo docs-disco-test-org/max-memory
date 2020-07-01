@@ -1,0 +1,12 @@
+{
+  "name": "max-memory",
+  "scripts": {
+    "build": "docker build -t max-memory:latest .",
+    "execute": "docker run --rm -it --name max-memory --memory=512mb max-memory:latest",
+    "start": "node main.js",
+    "test": "yarn build && yarn execute"
+  },
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT"
+}
