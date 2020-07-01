@@ -1,16 +1,14 @@
 version: 2.1
-orbs:
-  node: circleci/node@1.1.6
+
 jobs:
   build-and-test:
-    executor:
-      name: node/default
+    docker:
+      - image: node:14.4.0-alpine3.10
+    resource_class: small
     steps:
       - checkout
-      - node/with-cache:
-          steps:
-            - run: npm install
-            - run: npm test
+      - run: npm install
+      - run: npm test
 workflows:
     build-and-test:
       jobs:
